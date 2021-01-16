@@ -13,3 +13,11 @@ class Project(models.Model):
     image = models.ImageField(upload_to='portfolio/images/') # Field para imagenes
     url = models.URLField(blank=True) #Blank puede ser agregado a cualquiera de los fields y lo que permite es que exista la posibilidad
                                      #en este caso que tenga URL o no, se puede poner en Title para decidir si se pone o no... etc...
+
+
+# Algo que va a pasar también una vez que hago cosas con los modelos
+# es el migrar a la base de datos, en la consola voy a tener un mensaje de todo lo que tengo que migrar
+# se arregla simplemente en la consola con el comando manage.py migrate
+# Volvemos a correr el server y ya se fue el mensaje, tener en cuenta cuando trabajamos con models
+# cada cambio que querramos hacer tenemos que usar el comando manage.py makemigrations, esto para el modelo que acabamos
+# de crear lo tenemos que hacer primero, y lugo cada cambio que querramos hacer, lo manejamos de esa manera
