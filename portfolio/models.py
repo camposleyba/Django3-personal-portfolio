@@ -14,6 +14,8 @@ class Project(models.Model):
     url = models.URLField(blank=True) #Blank puede ser agregado a cualquiera de los fields y lo que permite es que exista la posibilidad
                                      #en este caso que tenga URL o no, se puede poner en Title para decidir si se pone o no... etc...
 
+    def __str__(self):
+        return self.title
 
 # Algo que va a pasar también una vez que hago cosas con los modelos
 # es el migrar a la base de datos, en la consola voy a tener un mensaje de todo lo que tengo que migrar
